@@ -7,8 +7,7 @@ import { campoNascimento } from './classesCamposFomulario/campoNascimento';
 
 @Component({
   selector: 'app-tela-login',
-  templateUrl: './tela-login.component.html',
-  styleUrls: ['./tela-login.component.less']
+  templateUrl: './tela-login.component.html'
 })
 
 export class TelaLoginComponent implements OnInit {
