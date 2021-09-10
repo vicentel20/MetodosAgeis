@@ -18,17 +18,18 @@ export class TelaLoginComponent implements OnInit {
   ngOnInit(): void {
   }
   
-  solicitacaoCadastro(nome: string, CPF: string, nascimento: string, responsavel: string, numBens: number){
+  solicitacaoCadastro(nome: string, CPF: string, nascimento: string, responsavel: string, numBens: any){
     var retorno = this.validaDados(nome,CPF,nascimento,responsavel,numBens);
-    if(retorno == "Dados de cadastro aprovados"){
-      this.msgErro = "";
+    /*if(retorno == "Dados de cadastro aprovados"){
+      this.msgErro = "Dados Aprovados";
     }
     else{
       this.msgErro = retorno;
-    }
+    }*/
+    this.msgErro = retorno;
   }
 
-  validaDados(nome: string, CPF:string, nascimento: string, responsavel:string, numBens:number)
+  validaDados(nome: string, CPF:string, nascimento: string, responsavel:string, numBens:any)
   {
     
     if (campoNome.valida(nome)==false){
@@ -51,6 +52,6 @@ export class TelaLoginComponent implements OnInit {
     }
   }
 
-  enviaDadosParaServidor(nome: string, CPF:string, nascimento: string, responsavel:string, numBens:number){}
+  enviaDadosParaServidor(nome: string, CPF:string, nascimento: string, responsavel:string, numBens:any){}
   avaliaRespostaServidor(respostaServidor:number){}
 }
