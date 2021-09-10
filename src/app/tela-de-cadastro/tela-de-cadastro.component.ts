@@ -6,11 +6,11 @@ import { campoNascimento } from './classesCamposFomulario/campoNascimento';
 
 
 @Component({
-  selector: 'app-tela-login',
-  templateUrl: './tela-login.component.html'
+  selector: 'app-tela-de-cadastro',
+  templateUrl: './tela-de-cadastro.component.html'
 })
 
-export class TelaLoginComponent implements OnInit {
+export class TelaDeCadastroComponent implements OnInit {
 
   msgErro="";
   corErro="red";
