@@ -74,7 +74,7 @@ describe('TelaDeCadastroComponent', () => {
   });
 
   it('Teste com data de nascimento do idoso inválida', () => {
-    expect(component.validaDados("Marcel Aldimir","34485861023","1941-02-30","Maria",3)).toBe("Data de nascimento é inválida");
+    expect(component.validaDados("Marcel Aldimir","34485861023","1941-02-30","Maria Betanea",3)).toBe("Data de nascimento é inválida");
   });
 
   /************ Testa entradas inválidas para o campo de reponsaveis legais ************/

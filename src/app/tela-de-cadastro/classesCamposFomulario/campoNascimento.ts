@@ -4,7 +4,7 @@
     }
 
     public static valida(nascimento: string): boolean {
-
+        alert("'" + nascimento + "'")
         //Valida se o número de caracteres da data está correto
         if (nascimento.length!=10){
             return false;
@@ -23,8 +23,8 @@
         else if ( Mes == 2 && ( (Dia == 29 && (Ano%4)==0 ) || Dia<=28) ){
             return true;
         }
-        //Demais meses possuem 30 dias
-        else if (Dia<=30){
+        //Demais meses possuem pelo menos 30 dias
+        else if (Dia<=30 && Mes !=2){
             return true;
         }
         //Se não se enquadrar em nenhuma das situações anteriores, retorna falso
