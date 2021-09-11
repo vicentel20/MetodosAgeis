@@ -4,15 +4,20 @@
 
     public static valida(cpf: string): boolean {
         
+        //Verifica se campo está em branco
         if (cpf == null) {
             return false;
         }
+        //Verifica comprimento da string
         if (cpf.length != 11) {
             return false;
         }
+        //Descarta alguns casos clássicos
         if ((cpf == '00000000000') || (cpf == '11111111111') || (cpf == '22222222222') || (cpf == '33333333333') || (cpf == '44444444444') || (cpf == '55555555555') || (cpf == '66666666666') || (cpf == '77777777777') || (cpf == '88888888888') || (cpf == '99999999999')) {
             return false;
         }
+
+        //Definições das variáveis utilizadas
         let numero: number = 0;
         let caracter: string = '';
         let numeros: string = '0123456789';
@@ -23,6 +28,8 @@
         let digito2: number = 0;
         let cpfAux: string = '';
         cpfAux = cpf.substring(0, 9);
+
+        //Realiza validação do código validados
         for (let i: number = 0; i < 9; i++) {
             caracter = cpfAux.charAt(i);
             if (numeros.search(caracter) == -1) {
@@ -55,6 +62,8 @@
         if (cpf != cpfAux) {
             return false;
         }
+
+        //Se código for válido, retorna verdadeiro
         else {
             return true;
         }

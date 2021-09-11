@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { TelaDeCadastroComponent } from './tela-de-cadastro.component';
+
 
 describe('TelaDeCadastroComponent', () => {
   let component: TelaDeCadastroComponent;
@@ -18,6 +18,8 @@ describe('TelaDeCadastroComponent', () => {
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
+
+  //DEFINIÇÃO DOS TESTES
 
   /************ Testa a criação dos campos ************/
   it('Testa a criação campo para inserir o nome do acolhido', () => {
